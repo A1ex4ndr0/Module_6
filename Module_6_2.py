@@ -8,13 +8,13 @@ class Vehicle:
         self.__color = __color
 
     def get_model(self):
-        print(f'Модель: {self.__model}')
+        print(f'Модель: {self.__model}', end = ', ')
 
     def get_horsepower(self):
-        print(f'Мощность двигателя: {self.__engine_power}')
+        print(f'Мощность двигателя: {self.__engine_power}', end = ', ')
 
     def get_color(self):
-        print(f'Цвет: {self.__color}')
+        print(f'Цвет: {self.__color}', end = ', ')
 
     def print_info(self):
         Vehicle.get_model(self)
