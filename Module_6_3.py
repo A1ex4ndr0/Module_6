@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 
 class Animal:
@@ -34,7 +34,7 @@ class Bird(Animal):
     beak = True # - наличие клюва
 
     def lay_eggs(self):
-        random_eggs = random.randint(1, 4)
+        random_eggs = randint(1, 4)
         print(f"Here are(is) {random_eggs} eggs for you")
 
 class AquaticAnimal(Animal):
