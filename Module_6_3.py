@@ -13,7 +13,6 @@ class Animal:
     def move(self, dx, dy, dz):
         if dz < 0:
             print(f"It's too deep, i can't dive :(")
-            self._cords = [dx, dy, dz]
         else:
             self._cords = list(map(lambda x: x * self.speed, [dx, dy, dz]))
         return self._cords
@@ -41,8 +40,11 @@ class AquaticAnimal(Animal):
     _DEGREE_OF_DANGER = 3
 
     def dive_in(self, dz):
-        self.speed /= 2
-        self._cords[2] -= int(abs(dz) * self.speed)
+        new_cord = self._cords[2] - int(abs(dz) * (self.speed/2))
+        if new_cord < 0:
+            print(f"It's too deep, i can't dive :(")
+        else:
+            self._cords[2] = new_cord
 
 class PoisonousAnimal(Animal):
     _DEGREE_OF_DANGER = 8
