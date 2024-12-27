@@ -1,5 +1,5 @@
 class Vehicle:
-    __COLOR_VARIANTS = ["Белый", "Чёрный", "Морская волна", "Красный", "Беж"]
+    __COLOR_VARIANTS = ["White", "Black", "Aquamarine", "Red", "Green"]
 
     def __init__(self, owner: str, model: str, engine_power: int, color: str):
         self.owner = owner
@@ -35,12 +35,12 @@ class Vehicle:
 class Sedan(Vehicle):
     __PASSENGERS_LIMIT = 5
 
-vehicle1 = Sedan('Fedos', 'Toyota Mark II', 500, 'Синий')
+vehicle1 = Sedan('Fedos', 'Toyota Mark II', 500, 'Blue')
 
 vehicle1.print_info()
 
-vehicle1.set_color('Серый')
-vehicle1.set_color('Морская волна')
+vehicle1.set_color('Gray')
+vehicle1.set_color('Aquamarine')
 vehicle1.owner = 'Vasyok'
 
 vehicle1.print_info()
